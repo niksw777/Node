@@ -1,22 +1,16 @@
-const os = require('os')
-const User = require('./user.js')
-const greeting = require('./greeting')
-
-let eugene = new User('Eugene', 27)
-eugene.sayHi()
-
-let userName = os.userInfo().username
-
-console.log(`Дата запроса: ${greeting.date}`)
-console.log(greeting.getMessage(userName))
+const welcome = require('./welcome')
+welcome.getMorningMessage() // каталог с файлом index.js поэтому такое обращение
+welcome.getEveningMessage() // по названию каталога 
 
 
-// const http = require('http')
-// http.createServer(function (request, response) { 
-//     response.end("Hello NodeJS")
-// })
-// .listen(3000, '127.0.0.1', function() {
-//     console.log('Сервер началм прослушивание запросов на порту 3000')
-// })
 
-// const greeting = require('./greeting')
+
+
+
+
+// var greeting1 = require('./greeting.js')
+// console.log(`Hello ${greeting1.name}`)
+// var greeting2 = require('./greeting.js')
+// greeting2.name = 'Bob'
+// console.log(`Hello ${greeting2.name}`)
+// console.log(`Hello ${greeting1.name}`)
